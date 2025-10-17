@@ -143,7 +143,7 @@ mybutton.addEventListener("click", function () {
 // Email sending
 // Initialize EmailJS
 // Initialize EmailJS with your user ID
-emailjs.init("ZyBdq3JrAeYe_-chO");
+emailjs.init("vy2GZ5KvMAEEUlp92");
 
 // Get the form and status elements
 const form = document.getElementById("contact-form");
@@ -154,7 +154,7 @@ form.addEventListener('submit', function(event) {
   event.preventDefault();
 
   // Send email using EmailJS
-  emailjs.sendForm('service_5zdqw9o', 'template_dkztyoy', form) // Pass the form directly
+  emailjs.sendForm('service_1hni8yb', 'template_i5s72qi', form) // Pass the form directly
     .then(function(response) {
       console.log('SUCCESS!', response);
       statusDiv.textContent = "Message sent successfully!";
