@@ -1,5 +1,5 @@
-/* appling google font over the website  */
-body{
+appling google font over the website 
+/* body{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     overflow-x: hidden;
@@ -9,7 +9,7 @@ body{
 :root{
     overflow-x: hidden;
     max-width: 100%;
-}
+} */
 /* styling menu icon */
 .nav-menu{
     border: none;
@@ -357,7 +357,7 @@ footer .link-group a:hover{
     padding: 14px 15px 10px 15px;
 }
 .social-links .dribble{
-    color: #f33a7e;
+    color: #fca61f;
 }
 .social-links button:hover{
     color: #fff;
@@ -368,10 +368,10 @@ footer .link-group a:hover{
     background-color:  #222;
 }
 .social-links .gmail {
-    color: #D14836;
+    color: #fca61f;
 }
 .social-links .gmail:hover {
-    background-color: #D14836;
+    background-color: #fca61f;
 }
 .social-links .behance{
     color: #255afc;
@@ -436,3 +436,370 @@ header .header-container {
         max-width: 1140px;
     }
 }
+
+
+
+/* 🌟 Navbar Styling */
+#navbar-top {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+/* 🧭 Brand Name */
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #3f396d !important;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #6c63ff !important;
+}
+
+/* 📌 Nav Links */
+.navbar-nav .nav-link {
+  position: relative;
+  font-weight: 500;
+  color: #3a3a3a;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #6c63ff;
+}
+
+/* ✨ Underline Hover Animation */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #6c63ff;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* 📱 Mobile Menu Button */
+.nav-menu {
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  color: #3f396d;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu:hover {
+  color: #6c63ff;
+  transform: rotate(90deg);
+}
+
+/* 🧭 Navbar on Scroll */
+.sticky-top.scrolled {
+  background: #fff;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌈 Responsive */
+@media (max-width: 991px) {
+  #navbarNav {
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    border-radius: 12px;
+    padding: 15px 0;
+    margin-top: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-nav .nav-link {
+    display: inline-block;
+    margin: 10px 0;
+  }
+}
+
+/* 🎨 Portfolio Section Styling */
+.portfolio {
+
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .heading small {
+  color: #0077ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.portfolio .heading h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #222;
+  position: relative;
+}
+
+.portfolio .heading h3::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #fca61f;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* 🖼️ Card Styling */
+.portfolio .card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  position: relative;
+}
+
+.portfolio .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio .card img {
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio .card:hover img {
+  transform: scale(1.05);
+}
+
+/* ✍️ Card Content */
+.portfolio .card-body {
+  padding-top: 20px;
+}
+
+.portfolio .card-title a {
+  color: #222;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.portfolio .card-title a:hover {
+  color: #fca61f;
+}
+
+.portfolio .text-muted {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* 🔗 Read More Button */
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fca61f;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+
+.read-more-btn::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #fca61f;
+  display: block;
+  transition: width 0.3s ease;
+}
+
+.read-more-btn:hover::after {
+  width: 100%;
+}
+
+/* 💬 Modal Styling */
+.modal-content {
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal-body img {
+  border-radius: 12px;
+}
+
+.modal-body h4 {
+  font-weight: 700;
+  color: #333;
+}
+
+.modal-body p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ❌ Modal Close Button */
+.btn-c {
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.4rem;
+  color: #ff6b6b;
+  transition: transform 0.3s ease;
+}
+
+.btn-c:hover {
+  transform: rotate(90deg);
+}
+
+/* 🌐 Social Links */
+.social-links a {
+  border: 2px solid #ff6b6b;
+  color: #ff6b6b;
+  padding: 6px 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio .card img {
+    height: 200px;
+  }
+
+  .portfolio .heading h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* 🌟 Skill Section */
+.skill {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill .heading small {
+  color: #ff6600;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.skill .heading h3 {
+  font-weight: 700;
+  color: #222;
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.skill .heading p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.skill .c-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ff8787);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.skill .c-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+}
+
+/* 🌀 Circular Progress Base */
+.circular-progress {
+  position: relative;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  background: conic-gradient(#ff6b6b 0deg, #e0e0e0 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.circular-progress:hover {
+  transform: scale(1.08);
+}
+
+.progress-value {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* 🔤 Skill Text */
+.progress-card {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.progress-card:hover {
+  transform: translateY(-8px);
+}
+
+.progress-card .text {
+  font-weight: 600;
+  color: #444;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* 🎨 Unique Color Variants for Each Skill */
+.circular-progress.javascript {
+  background: conic-gradient(#ff6b6b 0deg, #e0e0e0 0deg);
+}
+.circular-progress.html-css {
+  background: conic-gradient(#4dabf7 0deg, #e0e0e0 0deg);
+}
+.circular-progress.php {
+  background: conic-gradient(#9775fa 0deg, #e0e0e0 0deg);
+}
+.circular-progress.reactjs {
+  background: conic-gradient(#20c997 0deg, #e0e0e0 0deg);
+}
+
+/* 💻 Responsive Design */
+@media (max-width: 768px) {
+  .skill .heading h3 {
+    font-size: 1.5rem;
+  }
+
+  .circular-progress {
+    height: 110px;
+    width: 110px;
+  }
+
+  .progress-card .text {
+    font-size: 0.9rem;
+  }
+}
+
