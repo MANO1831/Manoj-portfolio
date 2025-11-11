@@ -1,3 +1,15 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* hides horizontal scroll */
+  overflow-y: auto;   /* allows vertical scroll only if needed */
+}
+
+/* Optional: For smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
 appling google font over the website 
 /* body{
     font-family: 'Josefin Sans', sans-serif;
@@ -43,12 +55,25 @@ appling google font over the website
     left: 0; 
   }
   /* styling contact btn  */
-.c-btn{
-    border: none;
-    background: #fca61f;
-    color: #fff;
-    font-size: 1.2rem;
+.skill .c-btn {
+  background: linear-gradient(135deg, #ff8800, #f8d94d);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
+
+.b-btn {
+  /* background: linear-gradient(135deg, #ff8800, #f8d94d); */
+  border: none;
+  color: #6f34fe;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 39, 206, 0.3);
+}
+
+
 /* styling home section starts */
 .home{
     background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 100%);
@@ -119,7 +144,7 @@ appling google font over the website
 
 /* expertise section starts */
 .heading small{
-    color: #6f34fe;
+    color: #ff6600;
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -334,51 +359,7 @@ appling google font over the website
 }
 
 /* footer section starts */
-footer{
-    background-color: #211e39;
-}
 
-footer .link-group a{
-    margin-left: 10px;
-    margin-right: 10px;
-    text-decoration: none;
-    color: #6c757d;
-    font-size: 1.1rem;
-    margin-top: 1rem;
-}
-footer .link-group a:hover{
-    color: #fca61f;
-}
-.social-links button{
-    border: none;
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    background-color: #fff;
-    padding: 14px 15px 10px 15px;
-}
-.social-links .dribble{
-    color: #fca61f;
-}
-.social-links button:hover{
-    color: #fff;
-    transform: translateY(-20px);
-    transition-duration: 1s;
-}
-.social-links .dribble:hover{
-    background-color:  #222;
-}
-.social-links .gmail {
-    color: #fca61f;
-}
-.social-links .gmail:hover {
-    background-color: #fca61f;
-}
-.social-links .behance{
-    color: #255afc;
-}
-.social-links .behance:hover{
-    background-color: #255afc;
-}
 
 /* styling back to top button */
 #btn-back-to-top {
@@ -535,7 +516,7 @@ header .header-container {
 }
 
 .portfolio .heading small {
-  color: #0077ff;
+  color: #ff6600;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -543,7 +524,7 @@ header .header-container {
 .portfolio .heading h3 {
   font-weight: 700;
   font-size: 2rem;
-  color: #222;
+  color: #3f396d;
   position: relative;
 }
 
@@ -654,8 +635,8 @@ header .header-container {
   border: none;
   background: transparent;
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 30px;
+  right: 35px;
   font-size: 1.4rem;
   color: #ff6b6b;
   transition: transform 0.3s ease;
@@ -667,8 +648,8 @@ header .header-container {
 
 /* 🌐 Social Links */
 .social-links a {
-  border: 2px solid #ff6b6b;
-  color: #ff6b6b;
+  border: 2px solid #ffffff;
+  color: #ffffff;
   padding: 6px 10px;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -706,7 +687,7 @@ header .header-container {
 
 .skill .heading h3 {
   font-weight: 700;
-  color: #222;
+  color: #3f396d;
   margin-top: 10px;
   font-size: 2rem;
 }
@@ -718,7 +699,7 @@ header .header-container {
 }
 
 .skill .c-btn {
-  background: linear-gradient(135deg, #ff6b6b, #ff8787);
+  background: linear-gradient(135deg, #ff8800, #f8d94d);
   border: none;
   color: #fff;
   font-weight: 600;
@@ -803,3 +784,121 @@ header .header-container {
   }
 }
 
+.card-img-top {
+  object-fit: cover;
+  height: 250px; /* Ensures all images have the same height */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.badge {
+  margin: 2px;
+  font-size: 0.8rem;
+}
+
+.btn-outline-dark {
+  transition: all 0.2s ease;
+}
+
+.btn-outline-dark:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+/* Footer Section */
+.footer {
+  background: linear-gradient(135deg, #3f396d 0%, #1f1b3a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 122, 0, 0.1);
+  border-radius: 50%;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 200px;
+  height: 200px;
+  background: rgba(245, 0, 87, 0.1);
+  border-radius: 50%;
+}
+
+.footer h3 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Footer Links */
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.footer-link:hover {
+  color: #ff7a00;
+  transform: translateY(-2px);
+}
+
+/* Social Buttons */
+.social-btn {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  color: #fff;
+  background: linear-gradient(45deg, #ff7a00, #f50057);
+  border-color: transparent;
+  transform: translateY(-4px);
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(90deg, #ff7a00, #f50057);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Fixes */
+@media (max-width: 576px) {
+  .footer h3 {
+    font-size: 1.5rem;
+  }
+  .footer-link {
+    font-size: 0.9rem;
+  }
+}
