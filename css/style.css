@@ -902,3 +902,62 @@ header .header-container {
     font-size: 0.9rem;
   }
 }
+
+
+
+/* Contact Section Background */
+.contact {
+  background: linear-gradient(135deg, #3f396d, #5a4bcf);
+  color: #fff;
+  position: relative;
+}
+
+/* Glassmorphism Cards */
+.contact-info-card,
+.contact-form-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info-card:hover,
+.contact-form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs & Textarea */
+.contact-form-card .form-control {
+  border: none;
+  border-radius: 30px;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.contact-form-card .form-control:focus {
+  background: #fff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #ff914d;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #ff6b00;
+  transform: scale(1.02);
+}
+
+/* Responsive Spacing */
+@media (max-width: 768px) {
+  .contact-info-card,
+  .contact-form-card {
+    margin-bottom: 2rem;
+  }
+}
