@@ -580,7 +580,7 @@ header .header-container {
 }
 
 .portfolio .text-muted {
-  font-size: 0.95rem;
+  font-size: 1.300rem;
   line-height: 1.6;
 }
 
@@ -905,59 +905,254 @@ header .header-container {
 
 
 
-/* Contact Section Background */
-.contact {
+/* Contact Section Styling */
+.contact-section {
   background: linear-gradient(135deg, #3f396d, #5a4bcf);
-  color: #fff;
+  color: white;
   position: relative;
 }
 
-/* Glassmorphism Cards */
-.contact-info-card,
-.contact-form-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Left Side */
+.contact-section .contact-info p {
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
-.contact-info-card:hover,
-.contact-form-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.contact-section .contact-info i {
+  color: #ff914d;
+  font-size: 1.3rem;
 }
 
-/* Inputs & Textarea */
-.contact-form-card .form-control {
-  border: none;
-  border-radius: 30px;
-  padding: 15px 20px;
-  background: rgba(255, 255, 255, 0.9);
-  transition: all 0.3s ease;
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: 0.3s;
 }
 
-.contact-form-card .form-control:focus {
-  background: #fff;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+.social-icons a:hover {
+  color: #ff914d;
 }
 
-/* Submit Button */
+/* Right Side (Form Section) */
+.contact-section .bg-light {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
 .submit-btn {
   background-color: #ff914d;
-  color: #fff;
+  color: white;
   border: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 30px;
 }
 
 .submit-btn:hover {
   background-color: #ff6b00;
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
-/* Responsive Spacing */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .contact-info-card,
-  .contact-form-card {
-    margin-bottom: 2rem;
+  .contact-section .bg-light {
+    border-radius: 0;
+    padding: 2rem;
+  }
+  .contact-section {
+    text-align: center;
   }
 }
+
+
+/* General Section Styling */
+.skill-section {
+  background-color: #f9f9ff;
+  color: #333;
+}
+
+.skill-section .heading small {
+  color: #ff914d;
+  font-weight: 600;
+}
+
+.skill-section h3 {
+  color: #3f396d;
+  font-weight: 700;
+}
+
+.progress-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Circular Progress */
+.circular-progress {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#ff914d 0deg, #d9d9d9 0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-progress::before {
+  content: '';
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.progress-value {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #3f396d;
+}
+
+.text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Button */
+.download-btn {
+  background-color: #ff914d;
+  color: #fff;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #ff6b00;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skill-section .row {
+    text-align: center;
+  }
+
+  .progress-card {
+    margin-bottom: 20px;
+  }
+
+  .circular-progress {
+    height: 100px;
+    width: 100px;
+  }
+
+  .progress-value {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+}
+/* Skill Section */
+.skill {
+  background: #f9f9ff;
+}
+
+/* Center progress items */
+.skill-with-progress .progress-card {
+  text-align: center;
+}
+
+.circular-progress {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#ff914d 0deg, #ddd 0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.progress-value {
+  position: relative;
+  font-weight: 600;
+  color: #3f396d;
+  font-size: 1rem;
+}
+
+.text {
+  font-weight: 500;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skill-with-progress {
+    margin-bottom: 2rem;
+  }
+
+  .progress-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .skill .heading {
+    text-align: center;
+  }
+
+  .c-btn {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+
+/* Filter Buttons Styling */
+.filter-buttons {
+  gap: 10px;
+}
+
+.filter-item {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter-item:hover,
+.filter-item.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-item {
+    width: 80%;
+    text-align: center;
+  }
+}
+
